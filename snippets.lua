@@ -99,41 +99,32 @@ M.snippets = {
 	banner = [[/%<string.rep("*", buffer.edge_column - buffer.column[buffer.current_pos] - 1)>
  * %0
  %<string.rep("*", buffer.edge_column - buffer.column[buffer.current_pos] - 2)>/]],
-	fun = [[%1(return type) %2(name)(%3(parameters))
-{
+	fun = [[%1(return type) %2(name)(%3(parameters)) {
 	%0
 	return ;
 }]],
-	vfun = [[void %1(name)(%2(parameters))
-{
+	vfun = [[void %1(name)(%2(parameters)) {
 	%0
 }]],
-	main = [[void main(string[] args)
-{
+	main = [[void main(int argc, char** argv) {
 	%0
 }]],
-	['for'] = [[for (%1(initilization); %2(condition); %3(increment))
-{
+	['for'] = [[for (%1(initilization); %2(condition); %3(increment)) {
 	%0
 }]],
-	fori = [[for (size_t i = 0; i != %1(condition); ++i)
-{
+	fori = [[for (size_t i = 0; i != %1(condition); ++i) {
 	%0
 }]],
-	['while'] = [[while (%1(condition))
-{
+	['while'] = [[while (%1(condition)) {
 	%0
 }]],
-	['if'] = [[if (%1(condition))
-{
+	['if'] = [[if (%1(condition)) {
 	%0
 }]],
-	dw = [[do
-{
+	dw = [[do {
 	%0
 } while (%1(condition));]],
-	sw = [[switch (%1(value))
-{
+	sw = [[switch (%1(value)) {
 %0
 default:
 	break;
@@ -141,20 +132,18 @@ default:
 	case = [[case %1:
 	%0
 	break;]],
-	class = [[class %1(name)
-{
+	class = [[class %1(name) {
 public:
 
 private:
 	%0
 }]],
-	struct = [[struct %1(name)
-{
+	struct = [[struct %1(name) {
 	%0
 }]],
 	mem = 'm_%1 = %1;\n%0',
-	inc = 'include <%0>',
-	linc = 'include \"%0\"',
+	inc = '#include <%0>',
+	linc = '#include \"%0\"',
 	sta = 'static',
 	st = 'string',
 	wch = 'wchar',
