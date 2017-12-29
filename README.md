@@ -1,5 +1,5 @@
 # Textadept CPP
-Simple module for CPP in TextAdpet, providing comment block completion and snippets
+Simple module for Textadept, providing commnet block completion and snippets for C++
 
 ## Features
 * Comment block completion
