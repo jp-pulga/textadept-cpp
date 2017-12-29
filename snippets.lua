@@ -136,7 +136,7 @@ M.snippets = {
 	['for'] = [[for (%1(initilization); %2(condition); %3(increment)) {
 	%0
 }]],
-	fori = [[for (size_t i = 0; i != %1(condition); ++i) {
+	fori = [[for (size_t %1(name) = %2(initilization) - 1; %1 > 0; %1--) {
 	%0
 }]],
 	['while'] = [[while (%1(condition)) {
@@ -165,20 +165,9 @@ private:
 	struct = [[struct %1(name) {
 	%0
 }]],
-	mem = 'm_%1 = %1;\n%0',
 	inc = '#include <%0>',
 	linc = '#include \"%0\"',
-	sta = 'static',
-	st = 'string',
-	wch = 'wchar',
-	dch = 'dchar',
-	ch = 'char',
-	dou = 'double',
-	fl = 'float',
-	by = 'byte',
 	ret = 'return',
-	co = 'const',
-	ty = 'typeof'
 }
 
 return M
